@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'norsebold';
+    src: url('norse-bold-webfont.woff2') format('woff2'),
+         url('norse-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    font: 20px Ubuntu, sans-serif; 
+}
+
+#icon-logo {
+    /* width: 50%; */
+    filter: invert(70%);
+}
+
+.left-container, 
+.right-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-container {
+    width: 40%;
+}
+
+.right-container {
+    width: 60%;
+    padding: 180px 50px;
+}
+
+.banner {
+    display: inline-block;
+}
+
+.card-container {
+    display: flex;
+}
+
+.info, .account-setup {
+    background-color: #f1f1f1;
+}
+
+.card {
+    box-shadow: 2px 2px 2px black;
+}
+

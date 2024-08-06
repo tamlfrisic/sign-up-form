@@ -1,22 +1,29 @@
 @font-face {
     font-family: 'norsebold';
-    src: url('norse-bold-webfont.woff2') format('woff2'),
-         url('norse-bold-webfont.woff') format('woff');
+    src: url('fonts/norse-bold-webfont.woff2') format('woff2'),
+         url('fonts/norse-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
+    justify-content: center;
     padding: 0;
     margin: 0;
     font: 20px Ubuntu, sans-serif; 
+    background: rgb(27,34,39);
 }
 
-#icon-logo {
-    /* width: 50%; */
-    filter: invert(70%);
+.form {
+    width: 90%;
+    height: 100vh;
+    display: flex;
 }
 
 .left-container, 
@@ -27,19 +34,52 @@ body {
 
 .left-container {
     width: 40%;
+    position: relative;
 }
 
 .right-container {
     width: 60%;
-    padding: 180px 50px;
 }
 
-.banner {
-    display: inline-block;
+.banner-background {
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    height: 180px;
+    background: black;
+    opacity: 0.5;
+    
+}
+
+#icon-logo {
+    filter: invert(100%);
+    width: 130px;
+}
+
+.banner-front{
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    height: 180px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'norsebold', Ubuntu;
+    font-size: 120px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0px;
+    font-size: 12px;
+    align-self: center;
+    color: white;
 }
 
 .card-container {
     display: flex;
+   
 }
 
 .info, .account-setup {
@@ -47,6 +87,86 @@ body {
 }
 
 .card {
-    box-shadow: 2px 2px 2px black;
+   padding: 20px 50px;
+   box-shadow: 1px 2px 5px #ccc;
+   background: white;
+   z-index: 1;
+   font: 24px;
 }
 
+.info {
+    padding: 170px 170px 70px 50px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.account-setup {
+    padding: 20px 170px 70px 50px;
+}
+
+label {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+    font: 16px Ubuntu, sans-serif;
+  }
+
+  input, button {
+    appearance: none;
+    box-sizing: border-box;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font: 16px;
+  }
+
+  input {
+    box-shadow: inset 1px 2px 3px #ccc;
+    height: 28px;
+    width: 250px;
+  }
+
+  /* input:invalid {
+    border: 2px solid hsl(0, 100%, 50%);
+    background: hsl(0, 100%, 90%);
+  } */
+
+  input:valid {
+    border: 2px solid hsl(146, 50%, 36%);
+    background: hsl(146, 50%, 90%);
+  }
+
+  input:focus, button:focus {
+    border: 2px solid black;
+    background: #f9f9f9;
+    outline: none;
+    /* box-shadow: 1px 2px 3px #aaa; */
+  }
+
+  button {
+    background-color: #596D48;
+    box-shadow: 1px 2px 3px #aaa;
+    color: white;
+    padding: 20px 60px;
+    font: 20px Ubuntu, sans-serif;
+    font-weight: 500;
+    margin: 20px 0;
+  }
+
+  button:focus {
+    border: 2px solid black;
+    background-color: #596D48;
+  }
+
+  button:active {
+    transform: translateY(1px);
+    background: hsl(0, 0%, 100%);
+    color: #596D48;
+    outline: none;
+    box-shadow: 1px 2px 3px #aaa;
+  }
+
+  p {
+    margin-top: 0px;
+    font-size: 16px;
+  }
